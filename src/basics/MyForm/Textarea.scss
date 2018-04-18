@@ -1,0 +1,13 @@
+.container {
+    padding: 15px;
+    label {
+        display: block;
+    }
+    input[type=text] {
+        display: block;
+        padding: 10px;
+        font-size: 18px;
+        border: 0;
+        outline: none;
+    }
+}
