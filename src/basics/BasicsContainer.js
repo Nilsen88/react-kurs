@@ -5,6 +5,14 @@ import DatePicker from './DatePicker';
 import Passwordfield from './Passwordfield';
 import Textarea from './Textarea';
 import Range from './Range';
+import Dropdown from './Dropdown';
+
+const countries = [
+	{value: 'nor', label: 'Norway'},
+	{value: 'swe', label: 'Sweden'},
+	{value: 'fin', label: 'Finland'},
+	{value: 'us'}
+  ];
 
 export class BasicContainer extends Component{
 	state = {
@@ -15,6 +23,7 @@ export class BasicContainer extends Component{
 		password: '',
 		notes: '',
 		reactLevel: '0',
+		country: ''
     }
     onButtonClick = () => {
 		console.log(this.state);
@@ -26,6 +35,7 @@ export class BasicContainer extends Component{
 			password: '',
 			notes: '',
 			reactLevel: '0',
+			country: ''
 		});
 	}
 	onTextBoxChange = (key, newInputText) => {
@@ -100,6 +110,11 @@ export class BasicContainer extends Component{
 							minVal="1"
 							maxVal="10"
 						/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<Dropdown options={countries} value={this.state.country} onChange={this.onTextBoxChange.bind(undefined, 'country')}/>
 						</td>
 					</tr>
 					<tr>
