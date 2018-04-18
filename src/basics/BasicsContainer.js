@@ -7,6 +7,9 @@ import Textarea from './Textarea';
 import Range from './Range';
 import Dropdown from './Dropdown';
 
+import textboxClasses from './Textarea.scss';
+import datePickerClass from './DatePicker.scss';
+
 const countries = [
 	{value: 'nor', label: 'Norway'},
 	{value: 'swe', label: 'Sweden'},
@@ -47,7 +50,7 @@ export class BasicContainer extends Component{
 		return (
 			<table>
 				<tbody>
-					<tr>
+					<tr class={textboxClasses.container}>
 						<td>
 						<Textbox 
 							value={this.state.firstName} 
@@ -56,7 +59,7 @@ export class BasicContainer extends Component{
 						/>
 						</td>
 					</tr>
-					<tr>
+					<tr class={textboxClasses.container}>
 						<td>
 						<Textbox
 							value={this.state.lastName}
@@ -65,7 +68,7 @@ export class BasicContainer extends Component{
 						/>
 						</td>
 					</tr>
-					<tr>
+					<tr class={datePickerClass.container}>
 						<td>
 						<DatePicker
 							value={this.state.dateOfBirth}
@@ -74,7 +77,7 @@ export class BasicContainer extends Component{
 						/>
 						</td>
 					</tr>
-					<tr>
+					<tr class={textboxClasses.container}>
 						<td>
 						<Textbox
 							value={this.state.userName}
