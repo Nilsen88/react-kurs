@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 export class Button extends Component{
     render(){
-        const {children, title, onClick, nrOfClicks} = this.props;
+        const {children, title, onClick} = this.props;
         return (
             <button 
                 type="button" 
                 title={title} 
                 onClick={onClick}>
-                Clicked {nrOfClicks} times
+                Submit
             </button>
         );
     }
