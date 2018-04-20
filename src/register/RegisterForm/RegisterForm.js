@@ -25,11 +25,11 @@ export class RegisterForm extends React.PureComponent{
                         <TextField floatingLabelText="Email" value={props.email} onChange={props.onEmailChange} fullWidth/>                       
                     </div>
                     <div className={classes.avatarFrame}>
-                        <Avatar/>
+                        <Avatar src={props.avatarImgSrc}/>
 
                         <hr className={classes.separator}/>
                         
-                        <TextField floatingLabelText="Avatar image url" value={props.avatarImageSrc} onChange={props.onAvatarImageChange} fullWidth/>                                        
+                        <TextField floatingLabelText="Avatar image url" value={props.avatarImgSrc} onChange={props.onAvatarImageChange} fullWidth/>                                        
                     </div>
                 </form>
                 <div className={classes.controls}>
@@ -46,7 +46,7 @@ export class RegisterForm extends React.PureComponent{
         dateOfBirth: PropTypes.instanceOf(Date),
         userName: PropTypes.string,
         email: PropTypes.string,
-        avatarImageSrc: PropTypes.string,
+        avatarImgSrc: PropTypes.string,
 
         onFirstNameChange: PropTypes.func.isRequired,
         onLastNameChange: PropTypes.func.isRequired,
